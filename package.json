@@ -1,0 +1,20 @@
+{
+  "name": "socketcluster-presentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "csv-write-stream": "^2.0.0",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "socketcluster-client": "^16.0.1",
+    "socketcluster-server": "^16.0.1"
+  }
+}

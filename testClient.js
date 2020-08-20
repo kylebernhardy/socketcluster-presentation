@@ -1,0 +1,10 @@
+'use strict';
+
+const SCClient = require('./SCClient');
+const {promisify} = require('util');
+const p_timeout = promisify(setTimeout);
+
+let client = new SCClient('localhost', 1000, 'testClient');
+p_timeout(200).then(()=>{
+    client.subscriptionListener('dog').then();
+});

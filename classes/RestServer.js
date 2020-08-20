@@ -6,7 +6,7 @@ const body_parser = require('body-parser');
 const csv_write_stream = require('csv-write-stream');
 const csvtojson = require("csvtojson");
 const path = require('path');
-const BASE_DATA_PATH = path.join(__dirname, 'data');
+const BASE_DATA_PATH = path.resolve(__dirname, '../', 'data');
 
 /**
  * spawns an express server & sets up routes with handlers

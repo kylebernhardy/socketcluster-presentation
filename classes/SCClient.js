@@ -16,6 +16,7 @@ module.exports = class SCClient{
     createListeners(){
         this.errorListener().then();
         this.connectListener().then();
+        this.getChannelDataProcedureListener().then();
     }
 
     /**
@@ -44,6 +45,13 @@ module.exports = class SCClient{
             } catch (e) {
                 console.error(e.message);
             }
+        }
+    }
+
+    async getChannelDataProcedureListener(){
+        for await (let request of this.socket.procedure('getChannelData')) {
+            request.end({});
+            continue;
         }
     }
 

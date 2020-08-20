@@ -9,7 +9,7 @@ const csvtojson = require("csvtojson");
 const {promisify} = require('util');
 const p_timeout = promisify(setTimeout);
 
-const USERS_CSV_PATH = path.join(__dirname, 'data', 'users.csv');
+const USERS_CSV_PATH = path.resolve(__dirname, '../', 'data', 'users.csv');
 
 /**
  * class to spawn an http, socket cluster & express servers all running on the same port

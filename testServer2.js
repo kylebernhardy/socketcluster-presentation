@@ -1,5 +1,5 @@
 'use strict';
 
-const SCServer = require('./SCServer');
+const SCServer = require('./classes/SCServer');
 
 new SCServer(2000, 'server2');

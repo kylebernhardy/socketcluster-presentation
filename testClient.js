@@ -1,6 +1,6 @@
 'use strict';
 
-const SCClient = require('./SCClient');
+const SCClient = require('./classes/SCClient');
 const {promisify} = require('util');
 const p_timeout = promisify(setTimeout);
 

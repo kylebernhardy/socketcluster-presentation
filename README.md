@@ -1,4 +1,4 @@
-# Code Sample for my SocketCluster Presentaion
+# Distributed Computing & Storage with SocketCluster
 
 This project shows how to create a socket cluster server with an integrated REST API, a socket cluster client to connect to an instance of a socket cluster server. 
 The REST API shows how you can: 

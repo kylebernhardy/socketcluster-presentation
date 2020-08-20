@@ -6,6 +6,7 @@ The REST API shows how you can:
 * GET data for a channel with the /read/:channel endpoint
 * Connect one SC Server to another with the /connect endpoint
 * Read data from all connected nodes with the /read_all/:channel endpoint
+* PostMan Collection with sample calls [here](https://github.com/kylebernhardy/socketcluster-presentation/blob/master/postmanCollection/SocketCluster%20Presentation.postman_collection.json)
 
 This project also exhibits:
 * How to wire in Authentication/Authorization with JWT

@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "c915780f-54b7-413d-bcfd-813624712f9e",
+		"name": "SocketCluster Presentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "write to the dog channel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Penny\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/write/dog",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"write",
+						"dog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read from the dog channel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1000/read/dog",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"read",
+						"dog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "connect one node to another for sharing data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"host\": \"localhost\",\r\n    \"port\": \"2000\",\r\n    \"subscriptions\":[\r\n\r\n        {\r\n            \"channel\":\"dog\",\r\n            \"publish\":true,\r\n            \"subscribe\": true\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:1000/connect",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"connect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read channel data from all connected nodes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:1000/read_all/dog",
+					"host": [
+						"localhost"
+					],
+					"port": "1000",
+					"path": [
+						"read_all",
+						"dog"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
